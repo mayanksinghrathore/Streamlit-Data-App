@@ -88,8 +88,6 @@ acc = accuracy_score(y_test, y_pred)
 st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc)
 
-#### PLOT DATASET ####
-# Project the data onto the 2 primary principal components
 pca = PCA(2)
 X_projected = pca.fit_transform(X)
 
@@ -105,5 +103,4 @@ plt.xlabel('Principal Component 1')
 plt.ylabel('Principal Component 2')
 plt.colorbar()
 
-#plt.show()
 st.pyplot(fig)
